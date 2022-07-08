@@ -59,3 +59,15 @@ gazelle_dependencies()
 load("@rules_python//gazelle:deps.bzl", _py_gazelle_deps = "gazelle_deps")
 
 _py_gazelle_deps()
+
+http_archive(
+    name = "com_github_grpc_grpc",
+    strip_prefix = "/grpc-1.46.4",
+    urls = [
+        "https://github.com/grpc/grpc/archive/refs/tags/v1.46.4.tar.gz",
+    ],
+)
+
+load("@com_github_grpc_grpc//bazel:grpc_python_deps.bzl", "grpc_python_deps")
+
+grpc_python_deps()
