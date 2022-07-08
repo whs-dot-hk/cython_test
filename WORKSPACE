@@ -62,6 +62,7 @@ _py_gazelle_deps()
 
 http_archive(
     name = "com_github_grpc_grpc",
+    sha256 = "e266aa0d9d9cddb876484a370b94f468248594a96ca0b6f87c21f969db2b8c5b",
     strip_prefix = "/grpc-1.46.4",
     urls = [
         "https://github.com/grpc/grpc/archive/refs/tags/v1.46.4.tar.gz",
